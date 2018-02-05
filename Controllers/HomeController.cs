@@ -7,9 +7,9 @@ namespace daw.Controllers
     [Route("api/[controller]")]
     public class HomeController : Controller
     {
-        private readonly MovieContext _context;
+        private readonly MyContext _context;
 
-        public HomeController(MovieContext context)
+        public HomeController(MyContext context)
         {
             _context = context;
         }

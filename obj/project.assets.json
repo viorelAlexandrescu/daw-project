@@ -12782,23 +12782,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Viorel\\.nuget\\packages\\": {},
+    "C:\\Users\\Viorel Alexandrescu\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Viorel\\projects\\school\\daw\\daw.csproj",
+      "projectUniqueName": "c:\\Users\\Viorel Alexandrescu\\projects\\school\\daw-project\\daw.csproj",
       "projectName": "daw",
-      "projectPath": "C:\\Users\\Viorel\\projects\\school\\daw\\daw.csproj",
-      "packagesPath": "C:\\Users\\Viorel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Viorel\\projects\\school\\daw\\obj\\",
+      "projectPath": "c:\\Users\\Viorel Alexandrescu\\projects\\school\\daw-project\\daw.csproj",
+      "packagesPath": "C:\\Users\\Viorel Alexandrescu\\.nuget\\packages\\",
+      "outputPath": "c:\\Users\\Viorel Alexandrescu\\projects\\school\\daw-project\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Viorel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Viorel Alexandrescu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -12822,18 +12822,18 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.All": {
-            "target": "Package",
-            "version": "[2.0.5, )"
-          },
           "Microsoft.NETCore.App": {
             "target": "Package",
-            "version": "[2.0.0, )",
+            "version": "2.0.0",
             "autoReferenced": true
+          },
+          "Microsoft.AspNetCore.All": {
+            "target": "Package",
+            "version": "2.0.5"
           },
           "MySql.Data.EntityFrameworkCore": {
             "target": "Package",
-            "version": "[6.10.6, )"
+            "version": "6.10.6"
           }
         },
         "imports": [

@@ -27,7 +27,7 @@ namespace daw
         {
             var sqlConnectionString = Configuration.GetConnectionString("DataAccessMySqlProvider");
 
-            services.AddDbContext<MovieContext>(options =>   
+            services.AddDbContext<MyContext>(options =>   
                 options.UseMySQL(Configuration.GetConnectionString("DatabaseAccess")));
             services.AddMvc();
         }
