@@ -1,0 +1,10 @@
+C:\Users\Viorel\projects\school\daw\bin\Debug\netcoreapp2.0\daw.deps.json
+C:\Users\Viorel\projects\school\daw\bin\Debug\netcoreapp2.0\daw.runtimeconfig.json
+C:\Users\Viorel\projects\school\daw\bin\Debug\netcoreapp2.0\daw.runtimeconfig.dev.json
+C:\Users\Viorel\projects\school\daw\bin\Debug\netcoreapp2.0\daw.dll
+C:\Users\Viorel\projects\school\daw\bin\Debug\netcoreapp2.0\daw.pdb
+C:\Users\Viorel\projects\school\daw\obj\Debug\netcoreapp2.0\daw.csproj.CoreCompileInputs.cache
+C:\Users\Viorel\projects\school\daw\obj\Debug\netcoreapp2.0\daw.AssemblyInfoInputs.cache
+C:\Users\Viorel\projects\school\daw\obj\Debug\netcoreapp2.0\daw.AssemblyInfo.cs
+C:\Users\Viorel\projects\school\daw\obj\Debug\netcoreapp2.0\daw.dll
+C:\Users\Viorel\projects\school\daw\obj\Debug\netcoreapp2.0\daw.pdb
