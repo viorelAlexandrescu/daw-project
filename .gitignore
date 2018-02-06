@@ -1,5 +1,5 @@
-bin
+bin/
 daw.webapp/node_modules
-wwwroot
-.vs
-obj
+wwwroot/
+.vs/
+obj/
