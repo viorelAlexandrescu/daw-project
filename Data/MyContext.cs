@@ -10,6 +10,18 @@ namespace daw.Data {
         public MyContext(DbContextOptions < MyContext > options): base(options) {}
 
         protected override void OnModelCreating(ModelBuilder builder) {
+            builder.Entity<Actor>().ToTable("Actors");
+            builder.Entity<Award>().ToTable("Awards");
+            builder.Entity<Cast>().ToTable("Casts");
+            builder.Entity<Genre>().ToTable("Genres");
+            builder.Entity<Language>().ToTable("Languages");
+            builder.Entity<MovieAward>().ToTable("MovieAwards");
+            builder.Entity<MovieGenre>().ToTable("MovieGenres");
+            builder.Entity<MovieLanguage>().ToTable("MovieLanguages");
+            builder.Entity<Movie>().ToTable("Movies");
+            builder.Entity<User>().ToTable("Users");
+            builder.Entity<Watchlist>().ToTable("Watchlist");
+
             builder.Entity < Cast > ().HasKey(table => new {
                 table.movieId, table.actorId
             });
