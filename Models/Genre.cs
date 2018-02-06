@@ -9,5 +9,7 @@ namespace daw.Models
     {
         public int id { get; set; }
         public string genre{ get; set; }
+
+        public ICollection<MovieGenre> movieLink { get; set; }
     }
 }
