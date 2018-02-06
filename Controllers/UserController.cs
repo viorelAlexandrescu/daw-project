@@ -28,7 +28,7 @@ namespace daw.Controllers {
             }, user);
         }
 
-        [HttpGet("{userId}", Name = "GetMovie")]
+        [HttpGet("{userId}", Name = "GetUser")]
         public IActionResult GetWatchlist(int userId) 
         {
             var movies = new List<Movie>();
