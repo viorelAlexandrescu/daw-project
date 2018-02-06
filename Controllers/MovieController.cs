@@ -57,7 +57,7 @@ namespace daw.Controllers {
 
         [HttpGet("{id}")]
         [Route("api/[controller]/id")]
-        public IActionResult GetById(long id) 
+        public IActionResult GetById(int id) 
         {
             foreach(var movie in _context.Movies) 
             {
@@ -181,7 +181,7 @@ namespace daw.Controllers {
         }
 
         [HttpPut("{id}")]
-        public IActionResult Update(long id, [FromBody] Movie movie) 
+        public IActionResult Update(int id, [FromBody] Movie movie) 
         {
             if (movie == null || movie.id != id) {
                 return BadRequest();
@@ -206,7 +206,7 @@ namespace daw.Controllers {
         }
 
         [HttpDelete("{id}")]
-        public IActionResult Delete(long id) 
+        public IActionResult Delete(int id) 
         {
             foreach(var movie in _context.Movies) 
             {
