@@ -55,6 +55,7 @@ namespace daw.Controllers {
         }
 
         [HttpGet("{id}", Name = "GetMovie")]
+        [Route("api/[controller]/id")]
         public IActionResult GetById(long id) 
         {
             foreach(var movie in _context.Movies) 
@@ -69,6 +70,7 @@ namespace daw.Controllers {
         }
 
         [HttpGet("{languageId}", Name = "GetMovie")]
+        [Route("api/[controller]/language")]
         public IActionResult GetByLanguage(int languageId) 
         {
             var movies = new List<Movie>();
@@ -89,6 +91,7 @@ namespace daw.Controllers {
         }
 
         [HttpGet("{genreId}", Name = "GetMovie")]
+        [Route("api/[controller]/genre")]
         public IActionResult GetByGenre(int genreId) 
         {
             var movies = new List<Movie>();
@@ -111,6 +114,7 @@ namespace daw.Controllers {
         }
 
         [HttpGet("{awardId}", Name = "GetMovie")]
+        [Route("api/[controller]/award")]
         public IActionResult GetByAward(int awardId) 
         {
             var movies = new List<Movie>();
@@ -133,6 +137,7 @@ namespace daw.Controllers {
         }
 
         [HttpGet("{release}", Name = "GetMovie")]
+        [Route("api/[controller]/release")]
         public IActionResult GetByRelease(int release) 
         {
             var movies = new List<Movie>();
@@ -152,6 +157,7 @@ namespace daw.Controllers {
         }
 
         [HttpGet("{actorId}", Name = "GetMovie")]
+        [Route("api/[controller]/actor")]
         public IActionResult GetByActor(int actorId) 
         {
             var movies = new List<Movie>();
