@@ -23,25 +23,25 @@ namespace daw.Controllers {
             _context.Movies.Add(movie);
             _context.SaveChanges();
 
-            return CreatedAtRoute("GetTodo", new {
+            return CreatedAtRoute("GetMovie", new {
                 id = movie.id
             }, movie);
         }
 
         [HttpGet]
-        public IEnumerable < Movie > GetAll() 
+        public JsonResult GetAll() 
         {
             var movies = new List < Movie > ();
             foreach(var movie in _context.Movies) 
             {
                 movies.Add(movie);
             }
-            return movies;
+            return Json(movies);
         }
 
         [HttpGet]
         [Route("api/[controller]/latest")]
-        public IEnumerable < Movie > GetLatest() 
+        public JsonResult GetLatest() 
         {
             var movies = new List < Movie > ();
             foreach(var movie in _context.Movies) 
@@ -51,7 +51,7 @@ namespace daw.Controllers {
                     movies.Add(movie);
                 }
             }
-            return movies;
+            return Json(movies);
         }
 
         [HttpGet("{id}", Name = "GetMovie")]
@@ -66,6 +66,111 @@ namespace daw.Controllers {
 
             // var movie = _context.Movies.Find(id);
             return NotFound();
+        }
+
+        [HttpGet("{languageId}", Name = "GetMovie")]
+        public IActionResult GetByLanguage(int languageId) 
+        {
+            var movies = new List<Movie>();
+            foreach(var movie in _context.Movies) 
+            {
+                foreach(var movieLanguage in movie.languageLink)
+                {
+                    if (movieLanguage.language.id == languageId) 
+                    {
+                        movies.Add(movie);
+                    }
+                }
+            }
+            if(movies.Count == 0){
+                return NotFound();
+            }
+            return new ObjectResult(movies);
+        }
+
+        [HttpGet("{genreId}", Name = "GetMovie")]
+        public IActionResult GetByGenre(int genreId) 
+        {
+            var movies = new List<Movie>();
+            foreach(var movie in _context.Movies) 
+            {
+                foreach(var movieGenre in movie.genreLink)
+                {
+                    if (movieGenre.genre.id == genreId) 
+                    {
+                        movies.Add(movie);
+                    }
+                }
+            }
+            
+            if(movies.Count == 0)
+            {
+                return NotFound();
+            }
+            return new ObjectResult(movies);
+        }
+
+        [HttpGet("{awardId}", Name = "GetMovie")]
+        public IActionResult GetByAward(int awardId) 
+        {
+            var movies = new List<Movie>();
+            foreach(var movie in _context.Movies) 
+            {
+                foreach(var movieAward in movie.awardLink)
+                {
+                    if (movieAward.award.id == awardId) 
+                    {
+                        movies.Add(movie);
+                    }
+                }
+            }
+            
+            if(movies.Count == 0)
+            {
+                return NotFound();
+            }
+            return new ObjectResult(movies);
+        }
+
+        [HttpGet("{release}", Name = "GetMovie")]
+        public IActionResult GetByRelease(int release) 
+        {
+            var movies = new List<Movie>();
+            foreach(var movie in _context.Movies) 
+            {
+                if(movie.release == release)
+                {
+                    movies.Add(movie);
+                }
+            }
+            
+            if(movies.Count == 0)
+            {
+                return NotFound();
+            }
+            return new ObjectResult(movies);
+        }
+
+        [HttpGet("{actorId}", Name = "GetMovie")]
+        public IActionResult GetByActor(int actorId) 
+        {
+            var movies = new List<Movie>();
+            foreach(var movie in _context.Movies) 
+            {
+                foreach(var movieActor in movie.actorLink)
+                {
+                    if (movieActor.actor.id == actorId) 
+                    {
+                        movies.Add(movie);
+                    }
+                }
+            }
+            
+            if(movies.Count == 0)
+            {
+                return NotFound();
+            }
+            return new ObjectResult(movies);
         }
 
         [HttpPut("{id}")]
