@@ -114,7 +114,7 @@ namespace daw.Controllers {
             return new ObjectResult(movies);
         }
 
-        [HttpGet("{awardId}"]
+        [HttpGet("{awardId}")]
         [Route("api/[controller]/award")]
         public IActionResult GetByAward(int awardId) 
         {
