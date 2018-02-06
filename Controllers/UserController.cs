@@ -12,6 +12,35 @@ namespace daw.Controllers {
             _context = context;
         }
 
+        private authenticate(User _user)
+        {
+            for(var user in _context.Users)
+            {
+                if((_user.username == user.username) && (_user.password == user.password))
+                {
+                    return true
+                }
+            }
+            return false;
+        }
+
+
+        [HttpPost]
+        [Route('api/{controller}/login')]
+        public IActionResult login([FromBody] User Wuser)
+        {
+            if (user == null) 
+            {
+                return BadRequest();
+            }
+
+            if(authenticate(user))
+            {
+                return ObjectResult('Success!');
+            }
+            return ObjectResult('Bad Login');
+        }
+
         [HttpPost]
         public IActionResult Create([FromBody] User user) 
         {
